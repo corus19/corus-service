@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "d7bb9d30-db82-418a-9bb4-d8d9755d8950",
+		"name": "Corona-tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Settings Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n  \"country\": \"india\",\n  \"keys\": [\n    \"regionUrl\",\n    \"maxBulkCount\",\n    \"minBulkCount\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"settings"
+					]
+				},
+				"description": "To get all the values of requested keys"
+			},
+			"response": []
+		},
+		{
+			"name": "NotificationSettings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userIds\": [\n\t\t\"dwqkjdlk\"\n\t\t],\n\t\"notificationType\": \"SETTINGS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/internal/notification/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"internal",
+						"notification",
+						"message"
+					]
+				},
+				"description": "To get all the values of requested keys"
+			},
+			"response": []
+		},
+		{
+			"name": "NotificationMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userIds\": [\n\t\t\"dwqkjdlk\"\n\t\t],\n\t\"notificationType\": \"MESSAGE\",\n\t\"message\": \"fjalwk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/internal/notification/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"internal",
+						"notification",
+						"message"
+					]
+				},
+				"description": "To get all the values of requested keys"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fbToken\": \"fbtokenvalue\",\n\t\"bluetoothSignature\": \"hgaysgdhsd.sdasdhjasd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info Api",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Info Api",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bluetoothSignature\": \"hgaysgdhsd.sdasdhjasd\",\n  \"os\": \"android\",\n  \"osVersion\": \"9.0\",\n  \"country\": \"INDIA\",\n  \"deviceId\": \"lHYuhhsjd\",\n  \"fcmId\": \"jHyuh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark User Covid Status Positive Api",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/user/markpositive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"markpositive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Contact Details Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"deviceRequests\": [\n    {\n      \"bluetoothSignature\": \"ushhdjusd.ssdsd\",\n      \"name\": \"Bluetooth Name\",\n      \"txPower\": 213,\n      \"rssi\": 32132,\n      \"timestamp\": 3213213,\n      \"lat\": 123,\n      \"lng\": 21.21\n    },\n    {\n      \"bluetoothSignature\": \"kkjjds.ssdsd\",\n      \"name\": \"Bluetooth Name 2\",\n      \"txPower\": 213,\n      \"rssi\": 32132,\n      \"timestamp\": 3213213,\n      \"lat\": 123,\n      \"lng\": 21.21\n    },\n    {\n      \"bluetoothSignature\": \"pkjjds.ssdsd\",\n      \"name\": \"Bluetooth Name 2\",\n      \"txPower\": 213,\n      \"rssi\": 32132,\n      \"timestamp\": 3213213,\n      \"lat\": 123,\n      \"lng\": 21.21\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/user/bulkContactDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"bulkContactDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
